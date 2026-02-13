@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding-top: 10vh;
+    overflow: hidden;
+    font-family: "Microsoft YaHei",sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#fireworksCvs{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.greeting{
+    position: fixed;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 200, 0, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.new-year-text{
+    font-size: 72px;
+    margin: 0;
+    letter-spacing: 8px;
+}
+
+.sub-text{
+    font-size: 24px;
+    margin: 20px 0 0;
+    opacity: 0.9;
+}
+
+.controls{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 3;
+}
+
+.btn{
+    padding: 12px 24px;
+    font-size: 18px;
+    background: linear-gradient(45deg,#ff6b6b,#ff8e8e);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-sizing: 0 4px 15px rgba(255,107,107,0.4);
+    transition: transform 0.3s,box-shadow 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(225, 107, 107, 0.6);
+}
+
+.visitor_Count{
+    color: white;
+    font-size: 18px;
+    background: rgba(0,0,0,0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+@keyframes glow{
+    from{text-shadow: 0 0 20px rgba(255, 200, 0, 0.8);}
+    to{text-shadow: 0 0 40px rgba(255, 100, 0, 0.8);}
+}
+
+@media (max-width: 768px){
+    .new-year-text{
+        font-size: 36px;
+    }
+
+    .sub-text{
+        font-size: 16px;
+    }
+
+    .btn{
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
